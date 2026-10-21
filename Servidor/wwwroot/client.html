@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f6f4">
+  <title>Cliente | Mensagens locais</title>
+  <link rel="stylesheet" href="/site.css">
+  <script src="/client.js" defer></script>
+</head>
+<body data-client="">
+  <main class="workspace">
+    <header class="page-header">
+      <a class="back-link" href="/">← Início</a>
+      <span id="connection-status" class="connection-status" role="status">Conectando...</span>
+    </header>
+
+    <section class="conversation" aria-labelledby="page-title">
+      <p class="eyebrow">CANAL DE MENSAGENS</p>
+      <h1 id="page-title">Cliente</h1>
+      <p class="intro">Mensagens recebidas aparecem aqui automaticamente.</p>
+
+      <ol id="message-list" class="message-list" aria-live="polite" aria-label="Mensagens recebidas">
+        <li id="empty-state" class="empty-state">Ainda não há mensagens.</li>
+      </ol>
+
+      <form id="message-form" class="message-form">
+        <label for="recipient">Enviar para</label>
+        <select id="recipient" name="recipient">
+          <option value="cliente1">Cliente 1</option>
+          <option value="cliente2">Cliente 2</option>
+        </select>
+
+        <label for="message-text">Mensagem</label>
+        <div class="compose-row">
+          <input id="message-text" name="message" type="text" maxlength="2000" placeholder="Escreva uma mensagem..." autocomplete="off" required>
+          <button id="send-button" type="submit">Enviar</button>
+        </div>
+        <p id="send-status" class="send-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
